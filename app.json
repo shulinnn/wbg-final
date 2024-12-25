@@ -7,7 +7,8 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "platforms": ["ios", "android", "web"],
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true
     },
@@ -15,11 +16,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.shulinnn.wbgfinal"
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -32,10 +34,23 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      ["expo-build-properties", {
+        "android": {
+          "usesCleartextTraffic": true
+        }
+      }]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d4858239-97d1-418b-ab04-d4adb8c25e10"
+      }
     }
   }
 }
