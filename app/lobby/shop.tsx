@@ -60,7 +60,7 @@ export default function Shop() {
 
     useEffect(() => {
         fetchData(); // Fetch the list of items on component mount
-    }, []);
+    }, [myString]);
 
     // Filter the data to only show the selected item if there is one
     const filteredData = expandedItemId

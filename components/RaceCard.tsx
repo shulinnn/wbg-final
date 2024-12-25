@@ -9,7 +9,9 @@ interface RaceCardProps {
 }
 
 const RaceCard: React.FC<RaceCardProps> = ({ race }) => {
-  const { updateString } = useAppContext();
+  const { updateString, myString } = useAppContext();
+
+  console.log(myString);
 
   return (
     <View style={styles.cardContainer}>
